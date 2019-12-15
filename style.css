@@ -1,28 +1,65 @@
-.buttonGroup{
+.buttonGroup {
     display: flex;
     justify-content: center;
 }
-#textArea{
-    width: 100%;
+
+#textArea,
+.result {
+    background-color: rgba(185, 174, 174, 0.555);
+    border-radius: 5px;
+    border: 1px solid grey;
+    padding: 20px;
+    margin: 10px 30px;
+    min-height: 200px;
+    width: 90%;
 }
-.result{
-    margin-top: 40px;
-    background-color: rgba(220, 218, 218, 0.179);
-    /* font-style:italic;
-    font-weight: bold; */
+
+.btn {
+    width: 60px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 10px;
+    color: white;
 }
+
+.btn_edit {
+    background-color: rgb(189, 178, 28);
+    color: black;
+}
+
+.btn_style {
+    background-color: rgb(28, 90, 170);
+}
+
+.btn_add {
+    background-color: rgb(196, 29, 0);
+}
+
+.btn_create,
+.btn_save {
+    background-color: green;
+}
+
+.btn_color,
+.btn_bgcolor {
+    width: 150px;
+    background-color: rgb(107, 106, 106);
+}
+
 .editBox,
 .tableListBox,
 .styleBox,
 .forTable,
-.listBox{
-    display:none;
+.listBox {
+    display: none;
 }
-#fontFamily{
+
+#fontFamily {
     width: 20%;
 }
 
-.containerColors{
+.containerColors {
     width: 210px;
     height: 210px;
     margin: 150px auto;
@@ -32,35 +69,63 @@
     left: 100px;
     top: -350px;
 }
-.size{
+
+.size {
     width: 70px;
     height: 70px;
-    background-size: 100% 100%; 
+    background-size: 100% 100%;
 }
-.red{
-    background-color:red;
+
+.red {
+    background-color: red;
 }
-.orangered{
-    background-color:orangered;
+
+.orangered {
+    background-color: orangered;
 }
-.orange{
-    background-color:orange;
+
+.orange {
+    background-color: orange;
 }
-.yellow{
-    background-color:yellow;
+
+.yellow {
+    background-color: yellow;
 }
-.yellowGreen{
-    background-color:yellowgreen;
+
+.yellowGreen {
+    background-color: yellowgreen;
 }
-.green{
-    background-color:green;
+
+.green {
+    background-color: green;
 }
-.blue{
-    background-color:blue;
+
+.blue {
+    background-color: blue;
 }
-.darkBlue{
-    background-color:darkblue;
+
+.darkBlue {
+    background-color: darkblue;
 }
-.purple{
-    background-color:purple;
+
+.purple {
+    background-color: purple;
+}
+
+.table {
+    text-align: center;
+}
+
+.choose {
+    display: flex;
+    justify-content: center;
+}
+
+.table {
+    text-align: left;
+}
+
+.fontweight,
+.fontsize {
+    display: flex;
 }

@@ -41,25 +41,24 @@ getSel('.style').addEventListener('click', () => {
 //font-size
 let f2 = document.forms['f2'];
 for (let i = 0; i < f2.elements.length; i++) {
-    f2.elements[i].addEventListener('click', function () {
+    f2.elements[i].addEventListener('click', function() {
         result.style.fontSize = this.value;
     })
 }
 
 //font-family
-getSel('#fontFamily').onchange = function () {
+getSel('#fontFamily').onchange = function() {
     result.style.fontFamily = this.value;
 }
 
 //checkbox1 (font-style:italic)
 let f4 = document.forms['f4'];
 let scheck = true;
-f4.fstyle.addEventListener('click', function () {
+f4.fstyle.addEventListener('click', function() {
     if (scheck) {
         result.style.fontStyle = this.value;
         scheck = false;
-    }
-    else {
+    } else {
         result.style.fontStyle = '';
         scheck = true;
 
@@ -68,12 +67,11 @@ f4.fstyle.addEventListener('click', function () {
 
 //checkbox2 (font-weight:bold)
 let wcheck = true;
-f4.fweight.addEventListener('click', function () {
+f4.fweight.addEventListener('click', function() {
     if (wcheck) {
         result.style.fontWeight = this.value;
         wcheck = false;
-    }
-    else {
+    } else {
         result.style.fontWeight = '';
         wcheck = true;
 
@@ -91,8 +89,8 @@ getSel('.tcolor').addEventListener('click', () => {
     getSel('.containerColors').style.display = 'flex';
     getSel('.containerColors').style.flexWrap = 'wrap';
     let getAtrColor = getSelAll('.containerColors>div');
-    [].forEach.call(getAtrColor, function (a) {
-        a.onclick = function () {
+    [].forEach.call(getAtrColor, function(a) {
+        a.onclick = function() {
             result.style.color = this.dataset.c;
         }
     })
@@ -103,8 +101,8 @@ getSel('.bgcolor').addEventListener('click', () => {
     getSel('.containerColors').style.display = 'flex';
     getSel('.containerColors').style.flexWrap = 'wrap';
     let getAtrColor = getSelAll('.containerColors>div');
-    [].forEach.call(getAtrColor, function (a) {
-        a.onclick = function () {
+    [].forEach.call(getAtrColor, function(a) {
+        a.onclick = function() {
             getSel('#result').style.backgroundColor = this.dataset.c;
         }
     })
@@ -114,7 +112,11 @@ let f6 = document.forms['f6'];
 let f7 = document.forms['f7'];
 
 for (let i = 0; i < f7.elements.length; i++) {
-    f7.elements[i].addEventListener('click', function () {
+    getSel('.tableBox').style.display = 'none';
+    getSel('.listBox').style.display = 'none';
+    f7.elements[i].addEventListener('click', function() {
+        tableBox.style.display = 'none';
+
         //radio 'table'
         if (f7.elements[i].value == 'table') {
             getSel('.listBox').style.display = 'none';
@@ -131,8 +133,9 @@ for (let i = 0; i < f7.elements.length; i++) {
 let createEl = z => document.createElement(z);
 
 //'Create table' button
-getSel('.createTable').addEventListener('click', function () {
+getSel('.createTable').addEventListener('click', function() {
     buttonGroup.style.display = 'block';
+
     //get filled values
     let tr = f6.tr.value;
     let td = f6.td.value;
@@ -180,7 +183,7 @@ getSel('.createTable').addEventListener('click', function () {
 
 
 //'Create list' button
-getSel('.createList').addEventListener('click', function () {
+getSel('.createList').addEventListener('click', function() {
     buttonGroup.style.display = 'block';
 
     //get filled values
